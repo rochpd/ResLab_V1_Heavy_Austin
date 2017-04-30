@@ -1,0 +1,948 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Gnostice.PDFOne.Windows.PDFViewer</name>
+    </assembly>
+    <members>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.PageChangedEventHandler">
+            <summary>
+            Represents an event handler for the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageChanged" text="PageChanged"/>
+            event.
+            </summary>
+            <param name="sender">Source of the event.</param>
+            <param name="e">Details about this event.</param>                                                                            
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.ZoomChangedEventHandler">
+            <summary>
+            Represents an event handler for the the ZoomChanged event.
+            </summary>
+            <param name="sender">Source of the event.</param>
+            <param name="e">Details about this event.</param>         
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityEventHandler">
+            <summary>
+            Represents handler for <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageMouseActivity" text="PageMouseActivity"/>
+            event.
+            </summary>
+            <param name="sender">Source of the event.</param>
+            <param name="e">Details about this event.</param>                                                                           
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.PageClickHandler">
+            <summary>
+            Represents the method that will handle the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageClick" text="PageClick"/>
+            event of the PDFViewer component.
+            </summary>
+            <param name="sender">Source of the event.</param>
+            <param name="e">Details about this event.</param>
+            <param name="pageNumber">The page number of the PDF page
+                                     that was clicked.</param>                                                                              
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.AfterPDFLoadedHandler">
+            <summary>
+            Represents handler for <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.AfterPDFLoaded" text="AfterPDFLoaded"/>
+            event.
+            </summary>
+            <param name="sender">Source of the event.</param>                                                                     
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.PageChangedEventArgs">
+            <summary>
+            Represents data about the PageChanged event.
+            </summary>                                  
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PageChangedEventArgs.PageNumber">
+            <summary>
+            Gets number of the current page.
+            </summary>                      
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.ZoomChangedEventArgs">
+            <summary>
+            Represents event data about the ZoomChanged event.
+            </summary>                                        
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.ZoomChangedEventArgs.PageNumber">
+            <summary>
+            Indicates number of the current page after the ZoomChanged
+            event.
+            </summary>                                                
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.ZoomChangedEventArgs.ZoomPercent">
+            <summary>
+            Indicates page magnification caused by the ZoomChanged event.
+            </summary>                                                   
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.ZoomChangedEventArgs.ZoomType">
+            <summary>
+            Indicates the type of page magnification caused by the
+            ZoomChanged event.
+            </summary>                                            
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityEventArgs">
+            <summary>
+            Represents event data about <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageMouseActivity" text="PageMouseActivity"/>
+            event.
+            </summary>                                                                                                                       
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityEventArgs.PageNumber">
+            <summary>
+            Get number of the page where the mouse activity occurred.
+            </summary>                                               
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityEventArgs.PageX">
+            <summary>
+            Gets x-coordinate of the point where the mouse activity
+            occurred.
+            </summary>                                             
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityEventArgs.PageY">
+            <summary>
+            Gets y-coordinate of the point where the mouse activity
+            occurred.
+            </summary>                                             
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityEventArgs.SelectionRect">
+            <summary>
+            Gets area on the page selected by the mouse.
+            </summary>                                  
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityEventArgs.OriginalEventArgs">
+            <summary>
+            Gets current mouse event data.
+            </summary>                    
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityEventArgs.MouseActivity">
+            <summary>
+            Gets type of current mouse activity. 
+            </summary>                           
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.RotationAngle">
+            <summary>
+            Specifies the standard rotation angles for page rotation in the PDFViewer component.
+            </summary>
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.RotationAngle.Clockwise180">
+            <summary>
+            Page is rotated 270 degrees in clockwise direction.
+            </summary>                                         
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.RotationAngle.Clockwise90">
+            <summary>
+            Page is rotated 180 degrees in clockwise direction.
+            </summary>                                         
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.RotationAngle.Zero">
+            <summary>
+            Page is rotated 90 degrees in clockwise direction.
+            </summary>                                        
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.RotationAngle.AntiClockwise90">
+            <summary>
+            Page is not rotated.
+            </summary>          
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.RotationAngle.AntiClockwise180">
+            <summary>
+            Page is rotated 90 degrees in counter-clockwise direction.
+            </summary>                                                
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.RotationAngle.AntiClockwise270">
+            <summary>
+            Page is rotated 180 degrees in counter-clockwise direction.
+            </summary>                                                 
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.StandardZoomType">
+            <summary>
+            Defines page magnification options for the PDFViewer
+            component. 
+            </summary>                                          
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.StandardZoomType.ActualSize">
+            <summary>
+            Page is displayed at its actual size.
+            </summary>                           
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.StandardZoomType.FitPage">
+            <summary>
+            Page's width and height are adjusted to fit the bounds of the
+            viewer's display area.
+            </summary>                                                   
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.StandardZoomType.FitWidth">
+            <summary>
+            Page's width is adjusted to fit the width of the viewer's
+            display area.
+            </summary>                                               
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.StandardZoomType.Custom">
+            <summary>
+            Page is magnified to a custom level.
+            </summary>                          
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityType">
+            <summary>
+            Specifies a list of mouse activities happening on a PDF page through 
+            PDFViewer component.
+            </summary>
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityType.None">
+            <summary>
+            No mouse activity on the PDF page.
+            </summary>
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityType.ButtonDown">
+            <summary>
+            A mouse button was pressed down within a PDF page
+            </summary>
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityType.ButtonUp">
+            <summary>
+            A mouse button was released within a PDF page
+            </summary>
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityType.Moving">
+            <summary>
+            Mouse movement activity without selection (click-and-drag).
+            </summary>                                                 
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.MouseActivityType.Selecting">
+            <summary>
+            A mouse button was used to select an area.
+            </summary>                                
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.ScrollBarVisibility">
+            <summary>
+            Defines visibility options for scroll bars of the viewer.
+            </summary>                                               
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.ScrollBarVisibility.Never">
+            <summary>
+            Always displayed.
+            </summary>       
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.ScrollBarVisibility.Auto">
+            <summary>
+            Never displayed.
+            </summary>      
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.PDFViewerException">
+            <summary>
+            Represents an exception that is raised when an attempt to
+            load, print, or close a PDF document fails.
+            </summary>                                               
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.InvalidPageNumberException">
+            <summary>
+            Represents an exception raised by the viewer when an attempt
+            is made to navigate to a non-existent page.
+            </summary>                                                  
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">
+            <summary>
+            Represents an exception raised by the viewer when it finds
+            that no document has been loaded previously for a
+            document-related operation to proceed.
+            </summary>                                                
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer">
+            <summary>
+            Represents the PDF viewer component.
+            </summary>                          
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.#ctor">
+            <summary>
+            Initializes a new instance of PDFViewer control.
+            </summary>
+            <remarks>
+            This constructor is used by Visual Studio when you drag and
+            drop the viewer control on a form. However, you should modify
+            the auto-generated constructor code and use the other
+            constructor in its place.
+            </remarks>                                                   
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of PDFViewer control and activates
+            its license with specified key.
+            </summary>
+            <param name="licenseKey">Key with which the license needs to
+                                     be activated.</param>
+            
+            <remarks>
+            You should use this constructor in place of the default
+            constructor that Visual Studio auto-generates when you drag
+            and drop the viewer control on a form.
+            </remarks>                                                   
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.RefreshView">
+            <summary>
+            Reloads the PDF document from its source and refresh its
+            display in the viewer.
+            </summary>
+            <remarks>
+            Use this method to update the display content in response to
+            edits made to the document while it was being displayed.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF
+                                                    document could
+                                                    not be loaded
+                                                    from the
+                                                    specified
+                                                    source.</exception>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.InvalidPageNumberException">When what was
+                                                         the "current
+                                                         page" no longer
+                                                         exists in the
+                                                         reloaded
+                                                         document.</exception>
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.CloseDocument">
+            <summary>
+            Stops the display of the current document in the viewer and
+            then unloads it from memory.
+            </summary>
+            <remarks>
+            If the associated PDFDocument was instantiated by the viewer,
+            then it will be disposed automatically. If this is not
+            intended, use <see cref="!:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.CloseDocument@bool" text="CloseDocument(bool)"/>
+            method to control the behavior explicitly. 
+            </remarks>                                                                                                            
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.CloseDocument(System.Boolean)">
+            <summary>
+            Stops the display of the current document in the viewer and
+            if specified unloads the PDF document from memory.
+            </summary>
+            <param name="disposeDoc">Whether the associated PDFDocument
+                                     instance needs to be disposed.</param>
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LoadDocument(System.String)">
+            <summary>
+            Loads a PDF document from specified path and displays it in
+            the viewer.
+            </summary>
+            <param name="fileName">Pathname of the document.</param>
+            <remarks>
+            If the viewer component already displays a document, then it
+            will automatically first close that document and the display
+            the specified document.
+            
+            If the PDF document is password protected, then the viewer
+            will call the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired" text="PasswordRequired"/>
+            event handler. If a handler is not set, then the viewer will
+            attempt to decrypt the document using the value of the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password" text="Password"/>
+            property.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.PDFException">When errors where
+                                           encountered when
+                                           processing the
+                                           specified PDF
+                                           document.</exception>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF document
+                                                    could not be loaded
+                                                    from the specified
+                                                    source.</exception>                                                                               
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LoadDocument(System.String,System.String)">
+            <summary>
+            Loads a PDF document from specified path, opens it with
+            specified password, and displays it in the viewer.
+            </summary>
+            <param name="fileName">Pathname of the document.</param>
+            <param name="password">Password with which the document
+                                   needs to be opened.</param>
+            <remarks>
+            If the viewer component was already displaying a document
+            when this method was called, then this method will
+            automatically first close that document and the display the
+            specified document.
+            
+            If the specified password does not work, then viewer will
+            call the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired" text="PasswordRequired"/>
+            event handler for a maximum of three times. If your code does
+            not provide a correct password in these three attempts, then
+            the specified document will not be displayed.
+            
+            The value set for the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password" text="Password"/>
+            property will NOT be considered by this method.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.PDFException">When errors where
+                                           encountered when
+                                           processing the
+                                           specified PDF
+                                           document.</exception>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF document
+                                                    could not be loaded
+                                                    from the specified
+                                                    source.</exception>                                                 
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LoadDocument(System.IO.Stream)">
+            <summary>
+            Loads the PDFViewer component with the PDF file provided as
+            stream.
+            </summary>
+            <param name="stream">Stream containing the PDF document that
+                                 needs to be displayed.</param>
+            <remarks>
+            If the viewer component already displays a document, then it
+            will automatically first close that document and the display
+            the specified document.
+            
+            If the PDF document is password protected, then the viewer
+            will call the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired" text="PasswordRequired"/>
+            event handler. If a handler is not set, then the viewer will
+            attempt to decrypt the document using the value of the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password" text="Password"/>
+            property.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.PDFException">When errors where
+                                           encountered when
+                                           processing the
+                                           specified PDF
+                                           document.</exception>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF document
+                                                    could not be loaded
+                                                    from the specified
+                                                    source.</exception>                                                                               
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LoadDocument(System.IO.Stream,System.String)">
+            <summary>
+            Loads a PDF document from specified stream, opens it with
+            specified password, and displays it in the viewer.
+            </summary>
+            <param name="stream">Stream containing the PDF document
+                                 that needs to be displayed.</param>
+            <param name="password">The password required to load the
+                                   document.</param>
+            <remarks>
+            If the viewer component was already displaying a document
+            when this method was called, then this method will
+            automatically first close that document and the display the
+            specified document.
+            
+            If the specified password does not work, then viewer will
+            call the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired" text="PasswordRequired"/>
+            event handler for a maximum of three times. If your code does
+            not provide a correct password in these three attempts, then
+            the specified document will not be displayed.
+            
+            The value set for the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password" text="Password"/>
+            property will NOT be considered by this method.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.PDFException">When errors where
+                                           encountered when
+                                           processing the
+                                           specified PDF
+                                           document.</exception>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF document
+                                                    could not be loaded
+                                                    from the specified
+                                                    source.</exception>                                                 
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LoadDocument(System.Byte[])">
+            <summary>
+            Loads a PDF document from specified byte array and displays
+            it in the viewer.
+            </summary>
+            <param name="byteArray">Byte array containing the PDF
+                                    document.</param>
+            <remarks>
+            If the viewer component already displays a document, then it
+            will automatically first close that document and the display
+            the specified document.
+            
+            If the PDF document is password protected, then the viewer
+            will call the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired" text="PasswordRequired"/>
+            event handler. If a handler is not set, then the viewer will
+            attempt to decrypt the document using the value of the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password" text="Password"/>
+            property.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.PDFException">When errors where
+                                           encountered when
+                                           processing the
+                                           specified PDF
+                                           document.</exception>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF document
+                                                    could not be loaded
+                                                    from the specified
+                                                    source.</exception>                                                                               
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LoadDocument(System.Byte[],System.String)">
+            <summary>
+            Loads a PDF document from specified byte array, opens it with
+            specified password, and displays it in the viewer.
+            </summary>
+            <param name="byteArray">Byte array containing the PDF
+                                    document.</param>
+            <param name="password">Password with which the document
+                                   needs to be opened.</param>
+            <remarks>
+            If the viewer component was already displaying a document
+            when this method was called, then this method will
+            automatically first close that document and the display the
+            specified document.
+            
+            If the specified password does not work, then viewer will
+            call the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired" text="PasswordRequired"/>
+            event handler for a maximum of three times. If your code does
+            not provide a correct password in these three attempts, then
+            the specified document will not be displayed.
+            
+            The value set for the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password" text="Password"/>
+            property will NOT be considered by this method.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.PDFException">When errors where
+                                           encountered when
+                                           processing the
+                                           specified PDF
+                                           document.</exception>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF document
+                                                    could not be loaded
+                                                    from the specified
+                                                    source.</exception>                                                 
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LoadDocument(Gnostice.PDFOne.PDFDocument)">
+            <summary>
+            Loads specified PDF document and displays it in the viewer.
+            </summary>
+            <param name="document">PDFDocument instance representing the
+                                   document that needs to be displayed.</param>
+            <remarks>
+            If the viewer component already displays a document, then it
+            will automatically first close that document and the display
+            the specified document.
+            
+            If the PDF document is password protected, then the viewer
+            will call the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired" text="PasswordRequired"/>
+            event handler. If a handler is not set, then the viewer will
+            attempt to decrypt the document using the value of the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password" text="Password"/>
+            property.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF document
+                                                    could not be loaded
+                                                    from the specified
+                                                    source.</exception>                                                                               
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LoadDocument(Gnostice.PDFOne.PDFDocument,System.String)">
+            <summary>
+            Loads specified PDF document, opens it with specified
+            password, and displays it in the viewer.
+            </summary>
+            <param name="document">PDFDocument instance representing the
+                                   document that needs to be displayed.</param>
+            <param name="password">Password with which the document
+                                   needs to be opened.</param>
+            <remarks>
+            If the viewer component was already displaying a document
+            when this method was called, then this method will
+            automatically first close that document and the display the
+            specified document.
+            
+            If the specified password does not work, then viewer will
+            call the <see cref="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired" text="PasswordRequired"/>
+            event handler for a maximum of three times. If your code does
+            not provide a correct password in these three attempts, then
+            the specified document will not be displayed.
+            
+            The value set for the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password" text="Password"/>
+            property will NOT be considered by this method.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.PDFNotLoadedException">When a PDF document
+                                                    could not be loaded
+                                                    from the specified
+                                                    source.</exception>                                                 
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.NextPage">
+            <summary>
+            Makes the viewer display the next page of the document.
+            </summary>                                             
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PreviousPage">
+            <summary>
+            Makes the viewer display the previous page of the document.
+            </summary>                                                 
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.FirstPage">
+            <summary>
+            Makes the viewer display the first page of the document.
+            </summary>                                              
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.LastPage">
+            <summary>
+            Makes the viewer display the last page of the document.
+            </summary>                                             
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.GoToPage(System.Int32)">
+            <summary>
+            Makes the viewer display specified page.
+            </summary>
+            <param name="pageNumber">Number of the page that needs to be
+                                     displayed.</param>
+            <returns>
+            Number of the current page after calling this method.
+            </returns>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.InvalidPageNumberException">When the number
+                                                         of a
+                                                         non\-existent
+                                                         page is
+                                                         specified.</exception>
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.GoToPage(System.Int32,System.Double,System.Double)">
+            <summary>
+            Makes the viewer navigate to the specified position on
+            specified page.
+            </summary>
+            <param name="pageNumber">Number of the page that needs to be
+                                     displayed.</param>
+            <param name="x">X\-coordinate of the position on
+                            the page where the top\-left corner
+                            of the viewer should be placed.</param>
+            <param name="y">Y\-coordinate of the position on
+                            the page where the top\-left corner
+                            of the viewer should be placed.</param>
+            <returns>
+            Number of the current page after calling this method.
+            </returns>
+            <remarks>
+            The 'x' and 'y' coordinates are assumed to be based on an
+            origin (0,0) at the top-left corner of the page.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.InvalidPageNumberException">When the number
+                                                         of a
+                                                         non\-existent
+                                                         page is
+                                                         specified.</exception>
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.GoToPage(System.Int32,System.Drawing.RectangleF)">
+            <summary>
+            Makes the viewer display specified area on specified page.
+            </summary>
+            <param name="pageNumber">Number of the page that needs to be
+                                     displayed.</param>
+            <param name="rect">Area on the page that needs to be
+                               displayed.</param>
+            <returns>
+            Number of the current page after calling this method.
+            </returns>
+            <remarks>
+            The rectangle coordinates are assumed to be based on an
+            origin (0,0) at the top-left corner of the page.
+            </remarks>
+            <exception cref="T:Gnostice.PDFOne.Windows.PDFViewer.InvalidPageNumberException">When the number
+                                                         of a
+                                                         non\-existent
+                                                         page is
+                                                         specified.</exception>
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.ZoomIn">
+            <summary>
+            Makes the viewer increase the magnification of the displayed
+            page.
+            </summary>
+            <returns>
+            Returns false if zoom has reached the maximum possible
+            value.
+            </returns>
+            <remarks>
+            The page magnification is progressively changed through the
+            following values: 1, 5, 10, 25, 50, 75, 100, 150, 200, 400,
+            800, 1600, 2400, 3200, and 6400
+            </remarks>                                                  
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.ZoomOut">
+            <summary>
+            Makes the viewer decrease the magnification of the displayed
+            page.
+            </summary>
+            <returns>
+            Returns false if zoom has reached the minimum possible
+            value.
+            </returns>
+            <remarks>
+            The page magnification is progressively changed through the
+            following values: 1, 5, 10, 25, 50, 75, 100, 150, 200, 400,
+            800, 1600, 2400, 3200, and 6400. 
+            </remarks>                                                  
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.RotateView(Gnostice.PDFOne.Windows.PDFViewer.RotationAngle)">
+            <summary>
+            Makes the viewer rotate the current page by specified angle.
+            </summary>
+            <param name="angle">Angle of rotation of the page by which
+                                the page needs to be rotated.</param>   
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.RotateClockwise90">
+            <summary>
+            Makes the viewer to rotate the current display of the page by
+            90 degrees in the clockwise direction.
+            </summary>                                                   
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.RotateAntiClockwise90">
+            <summary>
+            Makes the viewer to rotate the current display of the page by
+            90 degrees in the counter-clockwise direction.
+            </summary>                                                   
+        </member>
+        <member name="F:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify 
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Scroll">
+            <summary>
+            Occurs when the document is scrolled in the viewer.
+            </summary>                                         
+        </member>
+        <member name="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageClick">
+            <summary>
+            Occurs when a mouse is clicked on a page displayed in the
+            viewer.
+            </summary>                                               
+        </member>
+        <member name="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PasswordRequired">
+            <summary>
+            Occurs when a password is required to display a document.
+            </summary>
+            <remarks>
+            When a viewer tries to load an encrypted PDF document, it
+            will raise this event. Set PasswordRequiredEventHandler event
+            handler object to either provide a password with which the
+            document can be opened or to abandon the loading of the
+            document.
+            </remarks>                                                   
+        </member>
+        <member name="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.RenderError">
+            <summary>
+            Occurs when there are errors during rendering of a particular page of the PDF.
+            </summary>
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Preferences">
+            <summary>
+            Gets or sets viewing preferences.
+            </summary>                       
+        </member>
+        <member name="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageMouseActivity">
+            <summary>
+            Occurs when the viewer receives mouse activity over a
+            displayed PDF page.
+            </summary>
+            <remarks>
+            Use an event handler to find whether the user clicked a mouse
+            button, moved the mouse pointer, or held the mouse down and
+            selected a rectangular area.
+            </remarks>                                                   
+        </member>
+        <member name="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.AfterPDFLoaded">
+            <summary>
+            Occurs after a PDF has been loaded successfully by the
+            viewer.
+            </summary>
+            <remarks>
+            This event is internally used by PDFBookmarks component to
+            load the PDF outlines. 
+            </remarks>                                                
+        </member>
+        <member name="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageChanged">
+            <summary>
+            Occurs when there is a change in the current page displayed
+            by the viewer component. 
+            </summary>                                                 
+        </member>
+        <member name="E:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.ZoomChanged">
+            <summary>
+            Occurs when the zoom (page magnification) level has changed
+            in the viewer.
+            </summary>                                                 
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.BackColor">
+            <summary>
+            Gets or sets color of display area of the viewer that is not
+            occupied by pages of the document.
+            </summary>                                                  
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.BackgroundImage">
+            <summary>
+            Gets or sets the image that needs to be used as the
+            background of the display area of the viewer.
+            </summary>                                         
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.BackgroundImageLayout">
+            <summary>
+            Gets or sets the background image layout as defined in the
+            System.Windows.Forms.ImageLayout enumeration.
+            </summary>                                                
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Cursor">
+            <summary>
+            Gets or sets the image used to display the mouse pointer over
+            the viewer.
+            </summary>                                                   
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.BorderWidth">
+            <summary>
+            Gets or sets the width of the border between the pages of the PDF file.
+            </summary>
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.InputFileName">
+            <summary>
+            Gets the input PDF file name that is currently displayed by
+            the PDFViewer control.
+            </summary>
+            <remarks>
+            Value will be an empty string if the document is loaded from
+            a stream or PDFDocument object.
+            </remarks>                                                  
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.CurrentPage">
+            <summary>
+            Gets the current page being displayed in the PDFViewer.
+            </summary>
+            <remarks>
+            Set this property to make the viewer display the specified
+            page.
+            </remarks>                                                
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageBufferCount">
+            <summary>
+            Gets or sets the number of buffered pages for the PDF
+            document displayed in the PDFViewer.
+            </summary>
+            <remarks>
+            This value is used to buffer pages both before and after the
+            currently displaying pages. For example, if the current
+            displaying page is 5 and PageBufferCount is 2, then the pages
+            3, 4, 5, 6, 7 are held in memory in order to speed up the
+            \navigation between pages. 
+            </remarks>                                                   
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.TotalPageCount">
+            <summary>
+            Gets the total number of pages in the currently loaded PDF document.
+            </summary>
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.KeyNavigationEnabled">
+            <summary>
+            Gets or sets whether keyboard events can be used for
+            navigating pages displayed on the viewer.
+            </summary>                                          
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PDFLoaded">
+            <summary>
+            Gets whether a document is currently displayed in the viewer.
+            </summary>                                                   
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.ZoomPercent">
+            <summary>
+            Gets or sets the zoom level with which the viewer displays
+            pages.
+            </summary>
+            <remarks>
+            When the page magnification is changed, the viewer raises the
+            ZoomChanged event.
+            </remarks>                                                   
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.StdZoomType">
+            <summary>
+            Gets or sets default page magnification with which documents
+            need to be displayed in the viewer.
+            </summary>                                                  
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.PageRotationAngle">
+            <summary>
+            Gets or sets angle of rotation of pages displayed by viewer.
+            </summary>                                                  
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Password">
+            <summary>
+            Gets or sets password for decrypting the current document.
+            </summary>                                                
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Document">
+            <summary>
+            Gets or sets the PDF document that is displayed in the
+            viewer.
+            </summary>
+            <remarks>
+            Set this property with an existing PDFDocument instance that
+            has already loaded a PDF document. If you set this property,
+            you do not have call the LoadDocument method.
+            </remarks>                                                  
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.RenderingOptions">
+            <summary>
+            Gets or sets rendering option for lines, text, and images.
+            </summary>                                                
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.HScrollBar">
+            <summary>
+            Gets or sets visibility of the horizontal scroll bar.
+            </summary>                                           
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.VScrollBar">
+            <summary>
+            Gets or sets visibility of the vertical scroll bar.
+            </summary>                                         
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.VScrollValue">
+            <summary>
+            Gets or sets position of the thumb button on the vertical
+            scroll bar of the viewer.
+            </summary>
+            <remarks>
+            Set this property to do the scrolling programmatically. 
+            </remarks>                                               
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.HScrollValue">
+            <summary>
+            Gets or sets position of the thumb button on the horizontal
+            scroll bar of the viewer.
+            </summary>
+            <remarks>
+            Set this property to do the scrolling programmatically. 
+            </remarks>                                                 
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.VScrollSmallChange">
+            <summary>
+            Gets distance to which the thumb button needs to move when
+            the end-user clicks on one of the arrow buttons on the
+            vertical scroll bar of the viewer. 
+            </summary>                                                
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.HScrollSmallChange">
+            <summary>
+            Gets distance to which the thumb button needs to move when
+            the end-user clicks on one of the arrow buttons on the
+            horizontal scroll bar of the viewer. 
+            </summary>                                                
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.VScrollLargeChange">
+            <summary>
+            Gets distance to which the thumb button needs to move when
+            the end-user clicks in between the thumb button and the arrow
+            button on the vertical scrollbar of the viewer. 
+            </summary>                                                   
+        </member>
+        <member name="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.HScrollLargeChange">
+            <summary>
+            Gets distance to which the thumb button needs to move when
+            the end-user clicks in between the thumb button and the arrow
+            button on the horizontal scrollbar of the viewer. 
+            </summary>                                                   
+        </member>
+        <member name="T:Gnostice.PDFOne.Windows.PDFViewer.ViewerPreferences">
+            <summary>
+            Represents viewing preferences for the <see cref="P:Gnostice.PDFOne.Windows.PDFViewer.PDFViewer.Preferences" text="viewer component"/>.
+            
+            </summary>                                                                                                                            
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,401 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ResLab_V1_Heavy
+</name>
+</assembly>
+<members>
+<member name="T:ResLab_V1_Heavy.My.Resources.Resources">
+<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.ResourceManager">
+<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Culture">
+<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.add_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.address_book_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.ADOBE1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.asterisk_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Austin_Health">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.bsv_reslab_header">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.bsv_reslab_header1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.bsvlogo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.calculator_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.cancel_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.CHECKER">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.clock_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.CLOSED">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.contrast_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.DATABASE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.DBTABLE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.delete">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.DEMON">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Dolphin">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.down_arrow_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.drop">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.ecg">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.edit_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.EXCEL1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Exclamation">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.file_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.find">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.find1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.FORMS">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.goto_anywhere">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.LEAF">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.lens_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.line_chart_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.line_graph_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.line_graph_32x321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.List1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.LOCATE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Lungs">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.MainAppIcon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Mannitol">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.MRSSlogo">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.MRSSLogo1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.new_pro32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.notebook_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.OK">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.OPEN">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.PDF_VIEW">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Person">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.pill_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.PREV">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.PRINT">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.print_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.printicon">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Provocation">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.redo_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.remove_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.resize_height">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.round_add_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.round_add_32x321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.SAVE">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.save_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.table_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.table_32x321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.trend">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.trend1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.TXT">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.undo_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.undo_32x321">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.up_arrow_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.user_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.wikibooks_1_">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.Word1">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.wrench_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="P:ResLab_V1_Heavy.My.Resources.Resources.zoom_in_32x32">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
+<member name="T:ResLab_V1_Heavy.reslabdbDataSet">
+<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member>
+</members>
+</doc>

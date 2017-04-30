@@ -1,0 +1,651 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7E70461A-2139-4690-84FA-6CB9A5D79546}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>ResLab_V1_Heavy.My.MyApplication</StartupObject>
+    <RootNamespace>ResLab_V1_Heavy</RootNamespace>
+    <AssemblyName>ResLab_V1_Heavy</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ResLab_V1_Heavy.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ResLab_V1_Heavy.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>ResLab_V1_Heavy.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>ResLab_V1_Heavy.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DocumentationFile>ResLab_V1_Heavy.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DocumentationFile>ResLab_V1_Heavy.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <CodeAnalysisIgnoreBuiltInRuleSets>false</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>false</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>69EA1B58E5E8D8F7833F092FF1131AE44C7253BD</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>ResLab_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\Lungs.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Gnostice.PDFOne">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Gnostice\PDFOne.NET\Bin\Framework 4.0\Gnostice.PDFOne.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.PDFOne.PDFPrinter">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Gnostice\PDFOne.NET\Bin\Framework 4.0\Gnostice.PDFOne.PDFPrinter.dll</HintPath>
+    </Reference>
+    <Reference Include="Gnostice.PDFOne.Windows.PDFViewer">
+      <HintPath>..\..\..\..\..\Program Files (x86)\Gnostice\PDFOne.NET\Bin\Framework 4.0\Gnostice.PDFOne.Windows.PDFViewer.dll</HintPath>
+    </Reference>
+    <Reference Include="Ionic.Zlib">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Gnostice\PDFOne.NET\Bin\Framework 4.0\Ionic.Zlib.dll</HintPath>
+    </Reference>
+    <Reference Include="MathParser">
+      <HintPath>.\MathParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classes_support\class_app_config.vb" />
+    <Compile Include="classes_support\class_authenticate.vb" />
+    <Compile Include="classes_support\class_DAL.vb" />
+    <Compile Include="classes_support\class_healthservices.vb" />
+    <Compile Include="classes_support\class_ListViewItemComparer.vb" />
+    <Compile Include="classes_support\class_routines.vb" />
+    <Compile Include="classes_support\class_user.vb" />
+    <Compile Include="classes_RFT\class_plot_cpet.vb" />
+    <Compile Include="classes_support\class_reportsdb.vb" />
+    <Compile Include="classes_RFT\class_walktest.vb" />
+    <Compile Include="classes_support\class_buildtoolstripmenu.vb" />
+    <Compile Include="classes_RFT\class_challenge.vb" />
+    <Compile Include="classes_support\class_pingversion.vb" />
+    <Compile Include="classes_RFT\class_reportphrases.vb" />
+    <Compile Include="classes_RFT\class_spt.vb" />
+    <Compile Include="classes_RFT\class_walktest_plot.vb" />
+    <Compile Include="codefile_Structures.vb" />
+    <Compile Include="classes_PAS\class_pas.vb" />
+    <Compile Include="form_hast.Designer.vb">
+      <DependentUpon>form_hast.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_hast.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_login.Designer.vb">
+      <DependentUpon>form_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_password_create.Designer.vb">
+      <DependentUpon>form_password_create.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_password_create.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_reportsdb.Designer.vb">
+      <DependentUpon>form_reportsdb.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_reportsdb.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_rft_cpet.Designer.vb">
+      <DependentUpon>form_rft_cpet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_rft_cpet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_rft_session.Designer.vb">
+      <DependentUpon>form_rft_session.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_rft_session.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_spt.Designer.vb">
+      <DependentUpon>form_spt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_spt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_spt_allergen.Designer.vb">
+      <DependentUpon>form_spt_allergen.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_spt_allergen.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_migrate_jjp.Designer.vb">
+      <DependentUpon>form_migrate_jjp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_migrate_jjp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_password.Designer.vb">
+      <DependentUpon>form_password.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_password.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_customize.Designer.vb">
+      <DependentUpon>form_customize.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_customize.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_MainNew.Designer.vb">
+      <DependentUpon>form_MainNew.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_MainNew.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_DuplicatePatient.Designer.vb">
+      <DependentUpon>form_DuplicatePatient.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_DuplicatePatient.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_AboutBox.Designer.vb">
+      <DependentUpon>form_AboutBox.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_AboutBox.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="classes_RFT\class_plot_trend.vb" />
+    <Compile Include="classes_RFT\class_reportstrings.vb" />
+    <Compile Include="classes_support\class_printing.vb" />
+    <Compile Include="classes_RFT\class_pred.vb" />
+    <Compile Include="classes_RFT\class_pdf.vb" />
+    <Compile Include="classes_PAS\class_pas_rfts.vb" />
+    <Compile Include="form_rft_challenge.Designer.vb">
+      <DependentUpon>form_rft_challenge.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_rft_challenge.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_prefs_reportstyles.Designer.vb">
+      <DependentUpon>form_prefs_reportstyles.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_prefs_reportstyles.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_rft_phrases.Designer.vb">
+      <DependentUpon>form_rft_phrases.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_rft_phrases.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_spt_panelbuilder.Designer.vb">
+      <DependentUpon>form_spt_panelbuilder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_spt_panelbuilder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_walktest.Designer.vb">
+      <DependentUpon>form_walktest.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_walktest.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_updateReportStatus.Designer.vb">
+      <DependentUpon>form_updateReportStatus.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_updateReportStatus.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_reporting.Designer.vb">
+      <DependentUpon>form_reporting.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_reporting.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_prefs_list.Designer.vb">
+      <DependentUpon>form_prefs_list.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_prefs_list.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_PredSourceEditor.Designer.vb">
+      <DependentUpon>form_PredSourceEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_PredSourceEditor.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_prefs_normals.Designer.vb">
+      <DependentUpon>form_prefs_normals.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_prefs_normals.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_pred.designer.vb">
+      <DependentUpon>form_pred.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_pred.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_rft.Designer.vb">
+      <DependentUpon>form_rft.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_rft.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Demographics.Designer.vb">
+      <DependentUpon>form_Demographics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_Demographics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="form_Find.Designer.vb">
+      <DependentUpon>form_Find.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_Find.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="module_defs.vb" />
+    <Compile Include="module_initialise.vb" />
+    <Compile Include="module_intialise_globals.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="classes_support\class_preferences.vb" />
+    <Compile Include="form_splash.Designer.vb">
+      <DependentUpon>form_splash.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="reslabdbDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>reslabdbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.vb" />
+    <Compile Include="form_user.Designer.vb">
+      <DependentUpon>form_user.vb</DependentUpon>
+    </Compile>
+    <Compile Include="form_user.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="form_hast.resx">
+      <DependentUpon>form_hast.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_login.resx">
+      <DependentUpon>form_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_password_create.resx">
+      <DependentUpon>form_password_create.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_reportsdb.resx">
+      <DependentUpon>form_reportsdb.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_rft_cpet.resx">
+      <DependentUpon>form_rft_cpet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_rft_session.resx">
+      <DependentUpon>form_rft_session.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_spt.resx">
+      <DependentUpon>form_spt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_spt_allergen.resx">
+      <DependentUpon>form_spt_allergen.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_migrate_jjp.resx">
+      <DependentUpon>form_migrate_jjp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_password.resx">
+      <DependentUpon>form_password.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_customize.resx">
+      <DependentUpon>form_customize.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_MainNew.resx">
+      <DependentUpon>form_MainNew.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_DuplicatePatient.resx">
+      <DependentUpon>form_DuplicatePatient.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_AboutBox.resx">
+      <DependentUpon>form_AboutBox.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_rft_challenge.resx">
+      <DependentUpon>form_rft_challenge.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_prefs_reportstyles.resx">
+      <DependentUpon>form_prefs_reportstyles.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_rft_phrases.resx">
+      <DependentUpon>form_rft_phrases.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_spt_panelbuilder.resx">
+      <DependentUpon>form_spt_panelbuilder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_walktest.resx">
+      <DependentUpon>form_walktest.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_updateReportStatus.resx">
+      <DependentUpon>form_updateReportStatus.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_reporting.resx">
+      <DependentUpon>form_reporting.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_prefs_list.resx">
+      <DependentUpon>form_prefs_list.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_PredSourceEditor.resx">
+      <DependentUpon>form_PredSourceEditor.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_pred.resx">
+      <DependentUpon>form_pred.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_prefs_normals.resx">
+      <DependentUpon>form_prefs_normals.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_rft.resx">
+      <DependentUpon>form_rft.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Demographics.resx">
+      <DependentUpon>form_Demographics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_Find.resx">
+      <DependentUpon>form_Find.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_splash.resx">
+      <DependentUpon>form_splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="form_user.resx">
+      <DependentUpon>form_user.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reslabdbDataSet.xsc">
+      <DependentUpon>reslabdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="reslabdbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>reslabdbDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="reslabdbDataSet.xss">
+      <DependentUpon>reslabdbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\Lungs.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MainAppIcon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lungs1.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\printicon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\user_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\lens_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\print_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\file_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\table_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\line_graph_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\notebook_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\line_chart_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\edit_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\save_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\zoom_in_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bsvlogo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bsv-reslab-header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drop.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\find.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\resize_height.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\round_add_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\pill_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\wrench_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\clock_32x32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Icons\cancel_32x32.png" />
+    <None Include="Icons\redo_32x32.png" />
+    <None Include="Icons\undo_32x32.png" />
+    <None Include="Icons\address_book_32x32.png" />
+    <None Include="Icons\asterisk_32x32.png" />
+    <None Include="Icons\remove_32x32.png" />
+    <None Include="Icons\add_32x32.png" />
+    <None Include="Icons\up_arrow_32x32.png" />
+    <None Include="Icons\down_arrow_32x32.png" />
+    <None Include="Icons\contrast_32x32.png" />
+    <None Include="Icons\calculator_32x32.png" />
+    <Content Include="Icons\setup.ico" />
+    <None Include="Resources\goto.ico" />
+    <Content Include="Resources\round_add_32x32.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

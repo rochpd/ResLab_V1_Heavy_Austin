@@ -1,0 +1,57 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="Selected_DB_type" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">DB_type_SQLServer</Value>
+    </Setting>
+    <Setting Name="ConnectionString_SQLServer_MonashMC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=respdbtest;Database=RespDB;User Id=RespDB;Password=l!$ug50NbjtE;</Value>
+    </Setting>
+    <Setting Name="ConnectionString_Access" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\peter\Me\VB.NET applications\ResLab.Net\RespDB.accdb; User Id=admin; Password=;</Value>
+    </Setting>
+    <Setting Name="DB_type_Access" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MicrosoftAccess</Value>
+    </Setting>
+    <Setting Name="DB_type_SQLServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SQLServer</Value>
+    </Setting>
+    <Setting Name="DB_type_MySQL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">MySQL</Value>
+    </Setting>
+    <Setting Name="DefaultFolder_SavePDF" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C:\temp\</Value>
+    </Setting>
+    <Setting Name="ConnectionString_SQLServer_MyLaptop" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=PETE\SQLExpress;Trusted_connection=Yes;Database=ResLabDB_heavy;</Value>
+    </Setting>
+    <Setting Name="Selected_ConnectionString" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">ConnectionString_SQLServer_Austin</Value>
+    </Setting>
+    <Setting Name="BuildDate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">04/11/2016</Value>
+    </Setting>
+    <Setting Name="Version" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">1.0 Heavy</Value>
+    </Setting>
+    <Setting Name="ConnectionString_SQLServer_JohnHunter" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=HNESQLDEV01;Database=ResLabDB_SQL;User Id=RespLab_User;Password=resplab$user;</Value>
+    </Setting>
+    <Setting Name="ConnectionString_SQLServer_BoxHillHospital" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=EHTESTSQL12_API;Database=RespDB_SQL_Test;User Id=respdb_sqluser;Password=ehrespdbuser;</Value>
+    </Setting>
+    <Setting Name="ConnectionString_SQLServer_Alfred" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Server=ahacsql01;Database=RespDB;User Id=respdb;Password=RespAdmin2015;</Value>
+    </Setting>
+    <Setting Name="Password_hidden" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">donotenter</Value>
+    </Setting>
+    <Setting Name="Password_userset" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ConnectionString_SQLServer_Austin" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Server=localhost\SQLExpress;Trusted_connection=Yes;Database=ResLabDB_heavy;</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

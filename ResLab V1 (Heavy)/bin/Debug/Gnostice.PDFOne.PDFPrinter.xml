@@ -1,0 +1,444 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Gnostice.PDFOne.PDFPrinter</name>
+    </assembly>
+    <members>
+        <member name="T:Gnostice.PDFOne.PDFPrinter.PDFPrinter">
+            <summary>
+            Represents the PDF printer component.
+            </summary>                           
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.#ctor">
+            <summary>
+            Initializes a new instance of PDFPrinter component. 
+            </summary>                                          
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of PDFPrinter component with
+            specified license key.
+            </summary>
+            <param name="licenseKey">Key with which the license needs to
+                                     be activated.</param>              
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.CloseDocument">
+            <summary>
+            Stops processing the current document and unloads it from
+            memory.
+            </summary>
+            <remarks>
+            If the associated PDFDocument was instantiated by the
+            printer, then it will be disposed automatically. If this is
+            not intended, use <see cref="!:Gnostice.PDFOne.PDFPrinter.PDFPrinter.CloseDocument@bool" text="CloseDocument(bool)"/>
+            method to control the behavior explicitly. 
+            </remarks>                                                                                                          
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.CloseDocument(System.Boolean)">
+            <summary>
+            Stops processing the current document and if specified
+            unloads it from memory.
+            </summary>
+            <param name="disposeDoc">Specifies whether the associated
+                                     PDFDocument instance needs to be
+                                     disposed.</param>               
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.LoadDocument(System.IO.Stream,System.String)">
+            <summary>
+            Loads a PDF document from specified stream and decrypts with
+            specified password.
+            </summary>
+            <param name="stream">Stream from which the document needs
+                                 to be loaded.</param>
+            <param name="password">Password with which the document needs
+                                   to be decrypted.</param>
+            <remarks>
+            If the PDF document is password-protected, then the printer
+            component will raise the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired" text="PasswordRequired"/>
+            event for a maximum of three times. If none of the passwords
+            supplied to the event handler work, then the printer
+            component will attempt to decrypt the document using the
+            "password" parameter passed to this method. The <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password" text="Password"/>
+            property will NOT be used by this method.
+            </remarks>                                                                                                                   
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.LoadDocument(System.Byte[])">
+            <summary>
+            Loads a PDF document from specified byte array.
+            </summary>
+            <param name="byteArray">Byte array from which the document
+                                    needs to be loaded.</param>
+            <remarks>
+            If the PDF document is password-protected, then the printer
+            component will raise the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired" text="PasswordRequired"/>
+            event for a maximum of three times. If none of the password
+            supplied to the event handler work, then the printer
+            component will attempt to decrypt the document using the <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password" text="Password"/>
+            property.
+            </remarks>                                                                                                                            
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.LoadDocument(System.Byte[],System.String)">
+            <summary>
+            Loads a PDF document from specified byte array and decrypts
+            with specified password.
+            </summary>
+            <param name="byteArray">Byte array from which the document
+                                    needs to be loaded.</param>
+            <param name="password">Password with which the document
+                                   needs to be decrypted.</param>
+            <remarks>
+            If the PDF document is password-protected, then the printer
+            component will raise the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired" text="PasswordRequired"/>
+            event for a maximum of three times. If none of the passwords
+            supplied to the event handler work, then the printer
+            component will attempt to decrypt the document using the
+            "password" parameter passed to this method. The <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password" text="Password"/>
+            property will NOT be used by this method.
+            </remarks>                                                                                                                   
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.LoadDocument(System.IO.Stream)">
+            <summary>
+            Loads a PDF document from specified stream.
+            </summary>
+            <param name="stream">Stream from which the document needs to
+                                 be loaded.</param>
+            <remarks>
+            If the PDF document is password-protected, then the printer
+            component will raise the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired" text="PasswordRequired"/>
+            event for a maximum of three times. If none of the password
+            supplied to the event handler work, then the printer
+            component will attempt to decrypt the document using the <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password" text="Password"/>
+            property.
+            </remarks>                                                                                                                            
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.LoadDocument(System.String,System.String)">
+            <summary>
+            Loads a PDF document from a file with specified pathname and
+            decrypts it with specified password.
+            </summary>
+            <param name="fileName">Pathname of the file from which the
+                                   document needs to be loaded.</param>
+            <param name="password">Password with which the document
+                                   needs to be decrypted.</param>
+            <remarks>
+            If the PDF document is password-protected, then the printer
+            component will raise the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired" text="PasswordRequired"/>
+            event for a maximum of three times. If none of the passwords
+            supplied to the event handler work, then the printer
+            component will attempt to decrypt the document using the
+            "password" parameter passed to this method. The <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password" text="Password"/>
+            property will NOT be used by this method.
+            </remarks>                                                                                                                   
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.LoadDocument(System.String)">
+            <summary>
+            Loads a PDF document from a file with specified pathname.
+            </summary>
+            <param name="fileName">Pathname of the file from which the
+                                   document needs to be loaded.</param>
+            <remarks>
+            If the PDF document is password-protected, then the printer
+            component will raise the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired" text="PasswordRequired"/>
+            event for a maximum of three times. If none of the password
+            supplied to the event handler work, then the printer
+            component will attempt to decrypt the document using the <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password" text="Password"/>
+            property.
+            </remarks>                                                                                                                            
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.LoadDocument(Gnostice.PDFOne.PDFDocument,System.String)">
+            <summary>
+            Loads a PDF document from specified <see cref="T:Gnostice.PDFOne.PDFDocument" text="PDFDocument"/>
+            instance and decrypts with specified password.
+            </summary>
+            <param name="document">PDFDocument instance from which the
+                                   document needs to be loaded.</param>
+            <param name="password">Password with which the document
+                                   needs to be decrypted.</param>
+            <remarks>
+            If the PDF document is password-protected, then the printer
+            component will raise the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired" text="PasswordRequired"/>
+            event for a maximum of three times. If none of the passwords
+            supplied to the event handler work, then the printer
+            component will attempt to decrypt the document using the
+            "password" parameter passed to this method. The <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password" text="Password"/>
+            property will NOT be used by this method.
+            </remarks>                                                                                                                   
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.LoadDocument(Gnostice.PDFOne.PDFDocument)">
+            <summary>
+            Loads a PDF document from specified <see cref="T:Gnostice.PDFOne.PDFDocument" text="PDFDocument"/>
+            instance.
+            </summary>
+            <param name="document">PDFDocument instance from which the
+                                   document needs to be loaded.</param>
+            <remarks>
+            If the PDF document is password-protected, then the printer
+            component will raise the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired" text="PasswordRequired"/>
+            event for a maximum of three times. If none of the password
+            supplied to the event handler work, then the printer
+            component will attempt to decrypt the document using the <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password" text="Password"/>
+            property.
+            </remarks>                                                                                                                            
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Print(System.String)">
+            <summary>
+            Prints the currently loaded PDF document to the selected
+            printer.
+            </summary>
+            <param name="documentName">Document name to display (for
+                                       \example, in a print status
+                                       dialog box or printer queue)
+                                       while printing the document.</param>
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Print">
+            <summary>
+            Prints the currently loaded PDF document to the selected
+            printer.
+            </summary>                                              
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PrintOptions">
+            <summary>
+            Gets or sets settings related to current printer.
+            </summary>
+            <seealso cref="T:System.Drawing.Printing.PrinterSettings"/>
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.ShowPrintStatus">
+            <summary>
+            Gets or sets whether the printer needs to display the print
+            status dialog box.
+            </summary>                                                 
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PDFLoaded">
+            <summary>
+            Gets whether a document has been successfully set for
+            printing.
+            </summary>                                           
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.InputFileName">
+            <summary>
+            Gets the input PDF file name that is currently loaded by the
+            PDFPrinter control.
+            </summary>
+            <remarks>
+            This value is an empty string if the PDF document was loaded
+            using either stream or <see cref="T:Gnostice.PDFOne.PDFDocument" text="PDFDocument"/>
+            object. 
+            </remarks>                                                                          
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.ReversePageOrder">
+            <summary>
+            Gets or sets whether pages get printed in reverse order.
+            </summary>                                              
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.TotalPageCount">
+            <summary>
+            Gets number of total pages in the document.
+            </summary>                                 
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.SelectedPages">
+            <summary>
+            Gets or sets a custom page range for printing.
+            </summary>
+            <remarks>
+            This property will be considered only if in the PrintOptions
+            property (an instance of
+            System.Drawing.Printing.PrinterSettings), the PrintRange
+            property is set to "Selection" enum value.
+            </remarks>
+            <seealso cref="T:System.Drawing.Printing.PrintRange"/>        
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PageScaleType">
+            <summary>
+            Gets or sets how pages in the PDF document are scaled to fit
+            the printer paper size.
+            </summary>                                                  
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PageSubRange">
+            <summary>
+            Gets or sets a standard print range for printing.
+            </summary>                                       
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.CurrentPageNumber">
+            <summary>
+            Gets or sets the number of the page that has the user focus.
+            </summary>
+            <remarks>
+            This property will be considered if in the PrintOptions
+            Property object the PrintRange property is set to PrintRange
+            enumeration value CurrentPage.
+            </remarks>                                                  
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.OffsetHardMargins" -->
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.AutoRotate">
+            <summary>
+            Gets or sets whether the printer automatically rotates the
+            pages to suit the current orientation of the physical printer
+            (landscape or portrait).
+            </summary>                                                   
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.AutoCenter">
+            <summary>
+            Gets or sets whether the printer automatically centers the
+            pages when printing on the output medium (paper). 
+            </summary>                                                
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Password">
+            <summary>
+            Gets or sets the passwords with which this documents needs to
+            be read.
+            </summary>                                                   
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Document">
+            <summary>
+            Gets or sets the PDFDocument object instance which needs to be printed.
+            </summary>
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Preferences">
+            <summary>
+            Gets or sets printing preferences.
+            </summary>                        
+        </member>
+        <member name="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.RenderingOptions">
+            <summary>
+            Gets or sets rendering options with which PDF documents need
+            to be printed.
+            </summary>                                                  
+        </member>
+        <member name="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.BeforePrintPage">
+            <summary>
+            Occurs before a page is printed.
+            </summary>                      
+        </member>
+        <member name="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PrintError">
+            <summary>
+            Occurs when there is an error during the printing process.
+            </summary>
+        </member>
+        <member name="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.AfterPrintPage">
+            <summary>
+            Occurs after a page is printed.
+            </summary>                     
+        </member>
+        <member name="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.ChangePaperSource">
+            <summary>
+            Occurs when a new page is about to be printed (and a specific
+            paper tray can be selected for printing that page).
+            </summary>
+            <remarks>
+            Use this event to print specific pages to specific printer
+            trays. 
+            </remarks>                                                   
+        </member>
+        <member name="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PasswordRequired">
+            <summary>
+            Occurs when the user loads a PDF document which requires a password to open.
+            </summary>
+        </member>
+        <member name="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.RenderError">
+            <summary>
+            Occurs when there are errors during rendering of a particular page of the PDF.
+            </summary>
+        </member>
+        <member name="T:Gnostice.PDFOne.PDFPrinter.PrintPageDelegate">
+            <summary>
+            Represents an event handler for BeforePrintPage and
+            AfterPrintPage events.
+            </summary>
+            <param name="sender">PDFPrinter instance that caused
+                                 this event.</param>
+            <param name="pageNumber">Number of the page that caused the
+                                     BeforePrintPage and AfterPrintPage
+                                     event.</param>
+            <param name="e">Error information provided by the
+                            event.</param>                             
+        </member>
+        <member name="T:Gnostice.PDFOne.PDFPrinter.ChangePaperSourceDelegate">
+            <summary>
+            Represents the method that will handle the <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.ChangePaperSource" text="ChangePaperSource"/>
+            event of the PDFPrinter component.
+            </summary>
+            <param name="sender">The source of the event, i.e. an
+                                 object of PDFPrinter class.</param>
+            <param name="pageNumber">The page number of the currently
+                                     printing page.</param>
+            <param name="paperSource">The paper source for printing this
+                                      page.</param>                                                                                                   
+        </member>
+        <member name="T:Gnostice.PDFOne.PDFPrinter.PrintErrorDelegate">
+            <summary>
+            Represents an event handler for <see cref="E:Gnostice.PDFOne.PDFPrinter.PDFPrinter.PrintError" text="PrintError"/>
+            event.
+            </summary>
+            <param name="sender">Printer component that caused this
+                                 event.</param>
+            <param name="pageNumber">Number of the current page when the
+                                     error occurred.</param>
+            <param name="e">Error information provided by the
+                            event.</param>                                                                                   
+        </member>
+        <member name="T:Gnostice.PDFOne.PDFPrinter.PrintSubRange">
+            <summary>
+            Specifies pre-defined standard page ranges for printing.
+            </summary>                                              
+        </member>
+        <member name="F:Gnostice.PDFOne.PDFPrinter.PrintSubRange.All">
+            <summary>
+            All pages need to be printed.
+            </summary>                   
+        </member>
+        <member name="F:Gnostice.PDFOne.PDFPrinter.PrintSubRange.OddPages">
+            <summary>
+            Only odd-numbered pages need to be printed.
+            </summary>                                 
+        </member>
+        <member name="F:Gnostice.PDFOne.PDFPrinter.PrintSubRange.EvenPages">
+            <summary>
+            Only even-numbered pages need to be printed.
+            </summary>                                  
+        </member>
+        <member name="T:Gnostice.PDFOne.PDFPrinter.PrintScaleType">
+            <summary>
+            Specifies pre-defined page-scaling settings for printing PDF
+            files.
+            </summary>                                                  
+        </member>
+        <member name="F:Gnostice.PDFOne.PDFPrinter.PrintScaleType.None">
+            <summary>
+            No scaling is done, any larger page area is clipped off during printing.
+            </summary>
+        </member>
+        <member name="F:Gnostice.PDFOne.PDFPrinter.PrintScaleType.FitToPrintableArea">
+            <summary>
+            Pages are scaled up or down to fit the printer page size.
+            </summary>                                               
+        </member>
+        <member name="F:Gnostice.PDFOne.PDFPrinter.PrintScaleType.ReduceToPrintableArea">
+            <summary>
+            Page content is scaled down to fit the printable area of the
+            \output medium.
+            </summary>                                                  
+        </member>
+        <member name="T:Gnostice.PDFOne.PDFPrinter.PDFPrinterException">
+            <summary>
+            Represents an exception when an attempt to load, print, or
+            close the document fails.
+            </summary>                                                
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinterException.#ctor">
+            <summary>
+            Creates an instance of this class.
+            </summary>                        
+        </member>
+        <member name="M:Gnostice.PDFOne.PDFPrinter.PDFPrinterException.#ctor(System.String)">
+            <summary>
+            Creates an instance of this class with specified message.
+            </summary>                                               
+        </member>
+        <member name="T:Gnostice.PDFOne.PDFPrinter.PrinterPreferences">
+            <summary>
+            Represents printing preferences for the <see cref="P:Gnostice.PDFOne.PDFPrinter.PDFPrinter.Preferences" text="printer component"/>.
+            
+            </summary>                                                                                                                        
+        </member>
+    </members>
+</doc>
